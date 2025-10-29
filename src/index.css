@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+* {
+    font-family: Calibri, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
