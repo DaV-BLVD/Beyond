@@ -19,11 +19,4 @@ export const slides = [
         buttonText1: 'View Projects',
         buttonText2: 'Contact Us',
     },
-    // {
-    //     url: slide3,
-    //     title: '',
-    //     description: 'Upgrade your space with designs made for modern living.',
-    //     buttonText1: 'View Projects',
-    //     buttonText2: 'Contact Us',
-    // },
-];
+]

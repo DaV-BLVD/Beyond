@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router';
 
 const Form = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.querySelector(location.hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location]);
+
     return (
         <div>
             <div
-                className="w-full flex justify-center px-5 md:px-10 py-10 bg-gray-50"
+                className="w-full flex justify-center px-5 md:px-10 py-10 bg-gray-50 gap-7"
                 data-aos="fade-right"
             >
                 <form
                     className="w-full max-w-2xl bg-white shadow-md rounded-lg p-8"
                     onSubmit={(e) => e.preventDefault()}
+                    id="quote"
                 >
                     <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
                         Contact Form
@@ -99,6 +112,19 @@ const Form = () => {
                         Send
                     </button>
                 </form>
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d517.362829766517!2d85.33404383337165!3d27.728082368284316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1957d4429403%3A0x2e8fb4f4cfe35919!2sBeyondtech%20Nepal%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp!4v1761733523560!5m2!1sen!2snp"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        className="
+                        w-[600px] h-[600px]
+                        rounded-2xl
+                    "
+                        style={{ border: 0 }}
+                    ></iframe>
+                </div>
             </div>
         </div>
     );

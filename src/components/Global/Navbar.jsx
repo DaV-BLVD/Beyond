@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import beyondtechnepallogo from '../../assets/beyondtechnepallogoBrightened.png';
 import userIcon from '../../assets/images/nav/user.png';
-import { NavLink } from 'react-router';
+import { NavLink, useNavigate } from 'react-router';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+
+    const navigate = useNavigate();
 
     const links = [
         { name: 'Home', path: '/' },
@@ -13,6 +15,10 @@ export default function Navbar() {
         { name: 'Projects', path: '/projects' },
         { name: 'Contact', path: '/contact' },
     ];
+
+    const handleClick = () => {
+    navigate('/contact#quote');
+  };
 
     return (
         <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
@@ -45,9 +51,8 @@ export default function Navbar() {
                 </ul>
 
                 {/* Desktop Account Button */}
-                <button className="hidden items-center text-lg rounded-lg px-4 py-2 text-black font-[500] gap-2 md:flex">
-                    <img src={userIcon} alt="User Icon" className="w-6" />
-                    Account
+                <button className="hidden items-center text-lg rounded-lg px-4 py-2 text-white bg-red-500 font-[500] gap-2 md:flex hover:bg-red-400" onClick={handleClick}>
+                    Get Quote
                 </button>
 
                 {/* Hamburger Menu Button */}
@@ -109,8 +114,7 @@ export default function Navbar() {
 
                     {/* Mobile Account Button */}
                     <button className="flex items-center gap-2 text-black mt-0 px-4 py-2 bg-gray-100 rounded">
-                        <img src={userIcon} alt="User Icon" className="w-5" />
-                        Account
+                        Get Quote
                     </button>
                 </div>
             )}

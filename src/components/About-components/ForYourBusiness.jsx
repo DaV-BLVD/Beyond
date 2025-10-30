@@ -25,7 +25,7 @@ const ForYourBusiness = () => {
     ];
 
     return (
-        <div className="border-b-2 border-gray-200 py-12 px-4 sm:px-8 md:px-16 lg:px-24">
+        <div className="border-b-2 border-gray-200 py-12 px-4 sm:px-8 md:px-16 lg:px-24 bg-gray-100">
             <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-[32px] sm:text-[40px] text-red-600 font-semibold mb-4">
                     For A Service for All

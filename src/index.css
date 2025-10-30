@@ -7,4 +7,5 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 60px;
+    scroll-padding-top: 100px; /* adjust this space */
 }
