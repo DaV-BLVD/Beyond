@@ -5,6 +5,7 @@ import WhyChooseUs from '../components/Home/WhyChooseUs';
 import KeyOfferings from '../components/Home/keyOfferings';
 import Services from '../components/Home/Services';
 import Projects from '../components/Home/Projects';
+import Testimonials from '../components/Home/Testimonials';
 import FindMore from '../components/Home/FindMore';
 import Footer from '../components/Global/Footer';
 import SecondaryHeader from '../components/Home/SecondaryHeader';
@@ -20,6 +21,7 @@ const Home = () => {
             <Services />
             <KeyOfferings />
             <Projects />
+            <Testimonials />
             <FindMore />
             <Footer />
         </div>
