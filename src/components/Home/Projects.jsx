@@ -3,14 +3,14 @@ import projects from '../../data/projects.js';
 
 const Projects = () => {
     return (
-        <div className="mt-[40px] w-full mx-auto h-auto pb-10 bg-[rgb(245,245,245)]">
+        <div className="mt-[40px] w-full mx-auto h-auto pb-3 bg-[rgb(245,245,245)]">
             <div className="flex flex-col justify-center items-center">
                 <p className="text-center pt-8 text-[40px] font-semibold pb-4">
                     Our
                     <span className="text-red-500"> Projects Highlights</span>
                 </p>
 
-                <div className="flex flex-wrap justify-center gap-10 w-[90%] mx-auto py-10">
+                <div className="flex flex-wrap justify-center gap-10 w-[90%] mx-auto py-5">
                     {projects.map((item, index) => (
                         <div
                             key={index}
@@ -45,7 +45,7 @@ const Projects = () => {
                     ))}
                 </div>
             </div>
-            <div className="flex items-center justify-center mt-1">
+            <div className="flex justify-center mt-1">
                 <button
                     className="
                     group

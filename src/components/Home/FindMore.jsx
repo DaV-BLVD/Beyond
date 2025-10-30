@@ -1,3 +1,4 @@
+import { div } from 'framer-motion/client';
 import React from 'react';
 
 const FindMore = () => {
@@ -59,55 +60,62 @@ const FindMore = () => {
     ];
 
     return (
-        <section
-            className="
+        <div>
+            <div
+                className="
+                bg-[rgb(233,233,233)] h-10
+            "
+            ></div>
+            <section
+                className="
             min-h-[350px]
             bg-[linear-gradient(28deg,_rgba(48,48,48,1)_0%,_rgba(150,41,41,1)_51%,_rgba(191,84,84,1)_63%,_rgba(247,37,37,1)_100%)] flex flex-col items-center justify-center text-white px-6 py-12
-      "
-        >
-            <h2 className="text-3xl md:text-[35px] font-semibold mb-10 text-center">
-                Find More About Beyond Tech
-            </h2>
+            "
+            >
+                <h2 className="text-3xl md:text-[35px] font-semibold mb-10 text-center">
+                    Find More About Beyond Tech
+                </h2>
 
-            <div className="container mx-auto flex flex-wrap justify-center gap-6">
-                {cards.map((card, index) => (
-                    <div
-                        key={index}
-                        className="p-6 md:w-4/5 bg-transparent text-center flex flex-col items-center max-w-sm"
-                    >
-                        <div className="w-20 h-20 inline-flex items-center justify-center border-2 rounded-full text-white mb-5">
-                            {card.icon}
-                        </div>
-
-                        <h3 className="text-lg font-medium mb-3">
-                            {card.title}
-                        </h3>
-
-                        <p className="text-sm leading-relaxed text-justify mb-4">
-                            {card.desc}
-                        </p>
-
-                        <a
-                            href="#"
-                            className="inline-flex items-center text-white hover:underline"
+                <div className="container mx-auto flex flex-wrap justify-center gap-6">
+                    {cards.map((card, index) => (
+                        <div
+                            key={index}
+                            className="p-6 md:w-4/5 bg-transparent text-center flex flex-col items-center max-w-sm"
                         >
-                            Learn More
-                            <svg
-                                fill="none"
-                                stroke="currentColor"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                className="w-4 h-4 ml-2"
-                                viewBox="0 0 24 24"
+                            <div className="w-20 h-20 inline-flex items-center justify-center border-2 rounded-full text-white mb-5">
+                                {card.icon}
+                            </div>
+
+                            <h3 className="text-lg font-medium mb-3">
+                                {card.title}
+                            </h3>
+
+                            <p className="text-sm leading-relaxed text-justify mb-4">
+                                {card.desc}
+                            </p>
+
+                            <a
+                                href="#"
+                                className="inline-flex items-center text-white hover:underline"
                             >
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-                ))}
-            </div>
-        </section>
+                                Learn More
+                                <svg
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    className="w-4 h-4 ml-2"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    ))}
+                </div>
+            </section>
+        </div>
     );
 };
 
